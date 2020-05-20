@@ -1,0 +1,14 @@
+.container{
+    padding: 55px 260px 0px 260px;
+}
+
+#style {
+    padding: 70px;
+    border: 1px solid #4CAF50;
+    border-radius: 25px;
+    background: rgb(241, 245, 236);
+  }
+  #viewdetails{
+      margin-left: 120px;
+      margin-bottom: 40px;
+  }

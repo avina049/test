@@ -1,0 +1,81 @@
+
+<div class="container">
+    <div>
+    
+    <!-- form header -->
+    <!-- <div class="row" class="row justify-content-center" > -->
+      <div class="col-3" class="col justify-content-centre" id="nav">
+        <h1 id="heading">Add Product</h1>
+        <hr>
+      </div>
+      <div style="width: 400px;" class="container" class="col justify-content-centre">
+        <form action="" style="width:100%;">
+          <div class="col">
+      <div class="col">
+        <!--Product info -->
+            <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="fnText">Choose Your product</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                  
+                    <select  required>
+                      <option value=""></option>
+                      <option value="Laptop">Laptop</option>
+                      <option value="Mobile">Mobile</option>
+                      <option value="Ac">Ac</option>
+                      <option value="TV">TV</option>
+                    </select>  
+                    <small id="fnHelp" class="form-text custom-invalid-feedback">Field is required</small>
+                  </div>
+                <br>
+                <!--Product info -->
+                <!-- Please enter your Product name -->
+        
+            <div class="form-group">
+              <label for="lnText">Enter Your Product Name</label>
+              <input type="text" class="form-control" id="lnText" placeholder="Enter Product name">
+              <small id="fnHelp" class="form-text custom-invalid-feedback">Field is required</small>
+            </div><br>
+           <!-- Please enter your Model year -->
+        
+           <div class="form-group">
+            <label for="lnText">Enter Your Model Year</label>
+            <input type="text" class="form-control" id="lnText" placeholder="Enter Model Year">
+            <small id="fnHelp" class="form-text custom-invalid-feedback">Field is required</small>
+          </div><br>
+           <!-- Please enter your IMEINO/ID -->
+        
+           <div class="form-group">
+            <label for="lnText">Enter Your IMEINO/ID </label>
+            <input type="text" class="form-control" id="lnText" placeholder="Enter IMEINO/ID">
+            <small id="fnHelp" class="form-text custom-invalid-feedback">Field is required</small>
+          </div><br>
+           <!-- Please enter your RAM/Ltrs/Kgs -->
+        
+           <div class="form-group">
+            <label for="lnText">Enter your RAM/Ltrs/Kgs </label>
+            <input type="text" class="form-control" id="lnText" placeholder="Enter RAM/Ltrs/Kgs ">
+            <small id="fnHelp" class="form-text custom-invalid-feedback">Field is required</small>
+          </div>
+          <br>
+          <!-- Please enter your Quantity -->
+        
+          <div class="form-group">
+            <label for="lnText">Enter your Quantity</label>
+            <input type="text" class="form-control" id="lnText" placeholder="Enter Quantity ">
+            <small id="fnHelp" class="form-text custom-invalid-feedback">Field is required</small>
+          </div>
+          <br>
+          <!-- final action buttons -->
+          <div  class="row justify-content-center">
+            <div class="col-3" id="submit" >
+              <!-- <button (click)="SellByCategory" mat-flat-button color="primary"  type="button" >Submit</button>  &nbsp;
+           
+              <button type="button" class="btn btn-primary">Cancel</button> -->
+
+              <button (click)="subu()" type="button" class="btn btn-primary">Submit</button>
+              <!-- <button type="submit" >cancel</button> -->
+            </div>
+      
+        </div>
+         

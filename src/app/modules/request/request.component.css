@@ -1,0 +1,67 @@
+#request{
+    width: 700px;
+    height: 100px;
+}
+
+#submit{
+    margin-left: 100px;
+}
+#heading{
+    margin-left: 250px;
+    color: white;
+    padding: 10px 0px 0px 0px;
+}
+
+#nav{
+    background-color: rgb(13, 108, 197);
+    
+}
+
+#firstname{
+    height: 35px;
+    font-size: medium;
+}
+
+#lnText{
+    height: 35px;
+    font-size: medium;
+}
+
+#addText{
+    height: 35px;
+    font-size: medium;
+}
+
+
+#city{
+    height: 35px;
+    font-size: medium;
+}
+
+
+#inputState{
+    height: 35px;
+    font-size: medium;
+}
+
+#zipcode{
+    height: 35px;
+    font-size: medium;
+}
+
+#submit{
+    height: 35px;
+    font-size: medium;
+ 
+   
+}
+#button{
+    width: 100px;
+    height: 40px;
+    font-size: medium;
+ 
+}
+
+#click{
+    padding-right: 100px;
+}

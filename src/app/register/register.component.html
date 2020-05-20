@@ -1,0 +1,88 @@
+<!--
+<nav class="navbar-dark bg-dark" style="padding: 10px;">
+    <a routerLink="login" style="margin-right: 10px;" class="btn btn-primary">Login</a>
+    <a routerLink="register" style="margin-right: 10px;" class="btn btn-info">Registration</a>
+</nav>
+
+<div class="container">
+    <h3>Registration Page</h3>
+    <div [hidden]="submitted" style="width: 400px;">
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name </label>
+                <input placeholder="Enter Fullname" type="text" required name="fullname" id="fullname"
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="name">Email </label>
+                <input placeholder="Enter Email" type="text" required name="email" id="email"
+                    class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Password </label>
+                <input placeholder="Enter Password" type="text" required name="password" id="password"
+                    class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Confirm Password</label>
+                <input type="password" placeholder="Enter Confirm Password" required name="confirmpassword" class="form-control"
+                    id="confirmpassword">
+            </div>
+            <button type="submit" class="btn btn-success">Login</button>
+        </form>
+    </div>
+</div>
+-->
+<div class="container register">
+    <form #registerform="ngForm">
+    <div class="row">
+        <div class="col-md-4 register-left">
+            <div class="header">
+                <img src="assets/logo.jpeg" alt=""/>
+                <h5>PEB Management System</h5>
+            </div>
+            <h3>Welcome</h3>
+            <p> <i>TO STAY CONNECTED WITH US PLEASE SIGN IN WITH PERSONAL DETAILS</i></p>
+            <input type="submit" value="SIGN IN" [routerLink]="['/login']"/><br/>
+        </div>
+        
+        <div class="col-md-8 register-right">
+            <h3 class="register-heading">CREATE ACCOUNT</h3>
+            <div class="row register-form">
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" class="form-control" name="username" [(ngModel)]="user.username" required #username="ngModel"
+                        [class.is-invalid]="username.invalid && username.touched"/>
+                        <small class="text-danger" [class.d-none]="username.valid || username.untouched">*Full Name is required field</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Id</label>
+                        <input type="email" class="form-control" name="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+                        [(ngModel)]="user.emailId" #email="ngModel" [class.is-invalid]="email.invalid && email.touched"/>
+                        <div *ngIf="email.errors && (email.invalid && email.touched)">
+                            <small class="text-danger" *ngIf="email.errors.required">*email is required field</small>
+                            <small class="text-danger" *ngIf="email.errors.pattern">*enter valid email</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" [(ngModel)]="user.password" required #password="ngModel"
+                        [class.is-invalid]="password.invalid && password.touched"/>
+                        <small class="text-danger" [class.d-none]="password.valid || password.untouched">*password is required field</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpassword">Confirm Password</label>
+                        <input type="password" class="form-control" name="cpassword" #cpassword="ngModel" (ngModel)="user.password"required
+                        [class.is-invalid]="cpassword.invalid && cpassword.touched"/>
+                        <small class="text-danger" [class.d-none]="(cpassword.value == password.value) || cpassword.untouched">*password and confirm password must be same</small>
+                    </div>
+                    <input [disabled]="registerform.form.invalid" type="submit" class="btnRegister"  value="SIGN UP"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>

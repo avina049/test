@@ -1,0 +1,45 @@
+.container{
+    padding: 55px 260px 0px 260px;
+}
+
+#heading{
+    text-align: center;
+}
+
+#style {
+    padding: 70px;
+    border: 1px solid #4CAF50;
+    border-radius: 25px;
+    background: rgb(241, 245, 236);
+  }
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    padding: 0px 0px 0px 0px;
+    border-radius: 70%;
+}
+
+#wallet{
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+}
+
+.coins{
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    font-size: xx-large;
+}
+
+.coinsImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    padding: 0px 0px 0px 0px;
+    border-radius: 70%;
+}

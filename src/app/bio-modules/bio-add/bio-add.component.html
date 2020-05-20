@@ -1,0 +1,113 @@
+<!-- <div class="container">
+        <div class="center" id="nav" >
+          <h1>Bio Waste Details</h1>
+        </div> -->
+    <!-- main form -->
+    <!-- <div [hidden]="submitted" style="width: 400px;" >
+        <form #bioForm="ngForm" (ngSubmit)="bioShow()" autocomplete="off" style="width:100%;"> -->
+            <!--Bag info -->
+<!--                 
+                    <div class="form-group">
+                        <label for="redBag">Red Bag<span style="color: red;">*</span></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input #red='ngModel' (keypress)="numberOnly($event)" type="text" class="form-control" id="red" placeholder="Enter Numbers Only" 
+                            required [(ngModel)]="bio.redBag" [class.is-valid]="red.invalid && red.touched">
+                            <small class="text-danger" [class.d-none]="red.valid || red.untouched">
+                              value is mandatory
+                          </small> -->
+                             <!--<small id="fnHelp" class="form-text custom-invalid-feedback" >Field is required</small>-->
+                    <!-- </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="fnText">Blue Bag</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input (keypress)="numberOnly($event)" type="text" class="form-control" id="fnText" placeholder="Enter Numbers Only"> -->
+                             <!--<small id="fnHelp" class="form-text custom-invalid-feedback" >Field is required</small>-->
+                    <!-- </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="fnText">White Bag</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input (keypress)="numberOnly($event)" type="text" class="form-control" id="fnText" placeholder="Enter Numbers Only"> -->
+                            <!-- <small id="fnHelp" class="form-text custom-invalid-feedback" >Field is required</small>-->
+                    <!-- </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="fnText">Yellow Bag</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input (keypress)="numberOnly($event)" type="text" class="form-control" id="fnText" placeholder="Enter Numbers Only"> -->
+                            <!-- <small id="fnHelp" class="form-text custom-invalid-feedback" >Field is required</small>-->
+                    <!-- </div>    
+                    <div  class="row justify-content-center">
+                      <div class="col-3" id="submit" >
+                        <button type="submit" [disabled]="!bioForm.form.valid || bioFormError" mat-raised-button class="my-class"  >Add</button>
+                      
+                        
+                      &nbsp;&nbsp;&nbsp;
+                     
+                      <div>
+                        <button type="button" mat-raised-button class="my-class">Cancel</button>
+                      </div>
+                        
+                      </div>
+                  </div>         -->
+    <!-- final action buttons -->
+    
+              <!-- <div [hidden]="" class="alert alert-danger">
+                Please enter your first name
+                </div> -->
+              <!-- </form>
+            </div> -->
+
+<!-- ............................................................................................................................................ -->
+
+
+   <div id="request" style="padding-right:100px;" style="padding-inline:100px;"  style="padding-top:50px;"  class="container">
+
+      <div class="center" id="nav">
+          <h1>Bio Medical Waste Details</h1>
+        </div><br>
+    <!-- </div> -->
+  
+    <!-- main form -->
+    <div class="row" [hidden]="submitted">
+      <form action="" style="width:100%;" (ngSubmit)="bioShow()"  #bioForm="ngForm" autocomplete="off">
+
+              <div class="form-group">
+                <label for="redBag">Red Bag<span style="color: red;">*</span></label>
+                <input #redBag = 'ngModel' (keypress)="numberOnly($event)" type="text" required [(ngModel)]="bio.redBag"  required [(ngModel)]="bio.redBag" #noModel="ngModel" name="redBag" id="redBag" appBioNumberValidation class="form-control" placeholder="Enter Numbers Of Red Bag"
+                  [class.is-invalid] = "redBag.invalid && redBag.touched">
+                  <small class="text-danger" [class.d-none]="redBag.valid || redBag.untouched">Red Beg is required</small>
+                  <small class="text-danger" *ngIf="(noModel.touched || noModel.dirty)
+             && noModel.errors?.invalidNo">
+            Number should be more them 0</small>
+              </div>
+              <div class="form-group">
+                <label for="blueBag">Blue Bag<span style="color: red;">*</span></label>
+                <input #blueBag = 'ngModel' (keypress)="numberOnly($event)" type="text" required [(ngModel)]="bio.blueBag" name="blueBag" id="blueBag" class="form-control" placeholder="Enter Numbers Of blue Bag"
+                  [class.is-invalid] = "blueBag.invalid && blueBag.touched">
+                  <small class="text-danger" [class.d-none]="blueBag.valid || blueBag.untouched">blue Beg is required</small>
+              </div>
+              <div class="form-group">
+                <label for="WhiteBag">White Bag<span style="color: red;">*</span></label>
+                <input #WhiteBag = 'ngModel' (keypress)="numberOnly($event)" type="text" required [(ngModel)]="bio.whiteBag" name="WhiteBag" id="WhiteBag" class="form-control" placeholder="Enter Numbers Of White Bag"
+                  [class.is-invalid] = "WhiteBag.invalid && WhiteBag.touched">
+                  <small class="text-danger" [class.d-none]="WhiteBag.valid || WhiteBag.untouched">White Beg is required</small>
+              </div>
+              <div class="form-group">
+                <label for="YellowBag">Yellow Bag<span style="color: red;">*</span></label>
+                <input #YellowBag = 'ngModel' (keypress)="numberOnly($event)" type="text" required [(ngModel)]="bio.yellowBag" name="YellowBag" id="YellowBag" class="form-control" placeholder="Enter Numbers Of Yellow Bag"
+                  [class.is-invalid] = "YellowBag.invalid && YellowBag.touched">
+                  <small class="text-danger" [class.d-none]="YellowBag.valid || YellowBag.untouched">Yellow Beg is required</small>
+              </div>
+
+<br>
+              
+          <div class="row justify-content-center" id="click">
+            <div class="col-3" id="submit">
+              <button id="button" type="submit" [disabled]="!bioForm.form.valid || bioFormError"  mat-raised-button class="my-class">Submit</button>
+            </div>
+            <div>
+              <button type="button" mat-raised-button class="my-class" >Cancel</button>
+            </div>
+          </div>
+        <!-- </div> -->
+      </form>
+    </div>
+  </div>

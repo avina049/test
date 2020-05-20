@@ -1,0 +1,64 @@
+#pickup{
+    width: 700px;
+    height: 100px;
+}
+
+
+
+#heading{
+    margin-left: 200px;
+    color: white;
+}
+
+#nav{
+    background-color: blueviolet;
+    
+}
+
+#fnText{
+    height: 55px;
+    padding: 10px;
+    font-size: 1.2em;
+    width: 100%;
+
+}
+
+#lnText{
+        height: 55px;
+        padding: 10px;
+        font-size: 1.02em;
+        width: 100%;
+      
+}
+
+#Age{
+    height: 55px;
+}
+
+
+#Languages{
+    height: 55px;
+}
+
+
+#Phone No{
+    height: 55px;
+}
+
+#Description{
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  
+}
+
+button{
+	height:45px;
+    width: 150px;
+    font-size: 1.2em;
+    margin-left: 50px;
+	}
+
+   
+  

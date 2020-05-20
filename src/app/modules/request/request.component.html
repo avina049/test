@@ -1,0 +1,147 @@
+<div id="request" style="padding-right:100px;" style="padding-inline:100px;"  style="padding-top:50px;"  class="container">
+
+    <!-- form header -->
+    <!-- <div class="row" class="row justify-content-center" > -->
+      <div class="col-3" class="col justify-content-center" id="nav">
+        <h1 id="heading">Request Form</h1>
+        <hr>
+      </div>
+    <!-- </div> -->
+  
+    <!-- main form -->
+    <div class="row" [hidden]="submitted">
+      <form action="" style="width:100%;" (ngSubmit)="viewDetails()"  #addUserForm="ngForm" autocomplete="off">
+        <div class="col">
+  
+          <!-- personal info -->
+          <div class="row">
+            <div class="col">
+              <!-- <div class="form-group">
+                <label for="fnText">First Name</label>
+                <input type="text" class="form-control" id="firstname" placeholder="Enter first name" required 
+                [(ngModel)]="raiserequest.firstname" name="firstname" #firstname="ngModel" 
+                [class.is-invalid] = "firstname.invalid && firstname.touched">
+                <small id="fnHelp" class="form-text custom-invalid-feedback" >Field is required</small>
+                 <div [hidden]="firstname.valid || firstname.pristine"
+                class="alert alert-danger">
+                    Firstname is required
+                </div>
+              </div> -->
+
+              <div class="form-group">
+                <label for="firstname">First Name <span style="color: red;">*</span></label>
+                <input #firstname = 'ngModel' type="text" required [(ngModel)]="raiserequest.firstname" name="firstname" id="firstname" class="form-control" placeholder="Enter First Name"
+                  [class.is-invalid] = "firstname.invalid && firstname.touched">
+                  <small class="text-danger" [class.d-none]="firstname.valid || firstname.untouched">First Name is required</small>
+              </div>
+
+
+              <!-- <div [hidden]="" class="alert alert-danger">
+                Please enter your first name
+                </div> -->
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="lnText">Last Name <span style="color: red;">*</span> </label>
+                <input #lastname = 'ngModel' type="text" class="form-control" id="lnText" required [(ngModel)]="raiserequest.lastname" name="lastname" placeholder="Enter last name"
+                [class.is-invalid] = "lastname.invalid && lastname.touched">
+                <small class="text-danger" [class.d-none]="lastname.valid || lastname.untouched">Last Name is required</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col"> -->
+            <div class="form-group">
+              <label for="lnText">Email ID <span style="color: red;">*</span></label>
+              <input #emailId = 'ngModel' type="text" class="form-control" id="lnText" required [(ngModel)]="raiserequest.emailId" name="emailId" placeholder="Enter your mailId"
+              [class.is-invalid] = "emailId.invalid && emailId.touched">
+              <small class="text-danger" [class.d-none]="emailId.valid || emailId.untouched">Email ID is required</small>
+            </div>
+          <!-- </div>  -->
+
+          <div class="form-group">
+            <label for="addText">Amount Of Plastic <span style="color: red;">*</span></label>
+            <input #amountOfPlastic = 'ngModel' type="number" class="form-control" id="addText" required [(ngModel)]="raiserequest.amountOfPlastic" name="amountOfPlastic" placeholder="Enter amount of plastic" minlength="10"
+            [class.is-invalid] = "amountOfPlastic.invalid && amountOfPlastic.touched">
+            <small class="text-danger" [class.d-none]="amountOfPlastic.valid || amountOfPlastic.untouched">Amount Of Plastic should be greater than 10</small>
+          </div>
+
+          <div class="form-group">
+            <label for="addText">Description <span style="color: red;">*</span></label>
+            <input #description = 'ngModel' type="text" class="form-control" id="addText" required [(ngModel)]="raiserequest.description" name="description" placeholder="Enter Waste Details"
+            [class.is-invalid] = "description.invalid && description.touched">
+            <small class="text-danger" [class.d-none]="description.valid || description.untouched">Description is required</small>
+          </div>
+  
+  
+          <!-- seperator -->
+          <div class="row">
+            <div class="col">
+              <hr>
+            </div>
+          </div>
+  
+  
+          <!-- address form portion -->
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="addText">Street Address <span style="color: red;">*</span></label>
+                <input #streetName = 'ngModel' type="text" class="form-control" id="addText" placeholder="Enter street address" required [(ngModel)]="raiserequest.streetName" name="streetName"
+                [class.is-invalid] = "streetName.invalid && streetName.touched">
+                <small class="text-danger" [class.d-none]="streetName.valid || streetName.untouched">Street Address is required</small>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="city">City <span style="color: red;">*</span></label>
+                    <input #city = 'ngModel' type="text" class="form-control" id="city" required [(ngModel)]="raiserequest.city" name="city" placeholder="Enter city"
+                    [class.is-invalid] = "city.invalid && city.touched">
+                    <small class="text-danger" [class.d-none]="city.valid || city.untouched">City is required</small>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="inputState">State <span style="color: red;">*</span></label>
+                    <select #state = 'ngModel' id="inputState" class="form-control" required [(ngModel)]="raiserequest.state" name="state"
+                    [class.is-invalid] = "state.invalid && state.touched">
+                      <option selected>Choose...</option>
+                      <option *ngFor="let item of states" [value]="item">{{item}}</option>
+                    </select>
+                    <small class="text-danger" [class.d-none]="state.valid || state.untouched">Field is required</small>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label  for="zipcode">Zip Code <span style="color: red;">*</span></label>
+                    <input #pinCode = 'ngModel' type="text" class="form-control" id="zipcode" required [(ngModel)]="raiserequest.pinCode" name="pinCode" placeholder="Enter Pin Code"
+                    [class.is-invalid] = "pinCode.invalid && pinCode.touched">
+                    <small class="text-danger" [class.d-none]="pinCode.valid || pinCode.untouched">City is required</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- seperator -->
+          <div class="row">
+            <div class="col">
+              <hr>
+            </div>
+          </div>
+  
+          <!-- final action buttons -->
+          <!-- <popup>
+            Thank you For your Response
+          </popup> -->
+          <div class="row justify-content-center" id="click">
+            <div class="col-3" id="submit">
+              <button id="button" type="submit" [disabled]="!addUserForm.form.valid || addUserFormError" class="btn btn-primary btn-lg">Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

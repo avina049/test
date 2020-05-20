@@ -1,0 +1,54 @@
+
+
+#nav{
+    background-color: blueviolet ;
+    align-items: flex-start;
+}
+
+#fnText{
+    height: 35px;
+    
+}
+/* button {
+    font-family: Arial;
+    background-color:blue;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  } */
+*  {
+  box-sizing: border-box;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+.my-class{
+    width: 100px!important;
+    min-width: unset!important;
+}
+label{
+    font-size: 25px;
+    font-style: oblique;
+}
+input{
+    height: 40px;
+    font-size: 12px;
+    font-style: unset;
+}
+span{
+    font-size: large;
+}
+h1{
+    height: 15px;
+    color: whitesmoke;
+}
+/* label{
+    font-size: xx-large;
+} */
+button{
+    box-sizing: content-box;
+}

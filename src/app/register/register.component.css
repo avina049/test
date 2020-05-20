@@ -1,0 +1,93 @@
+.register{
+    background: #9D93FC;
+    margin-top: 4%;
+    box-shadow: 2px 2px 5px 5px grey;
+    border-radius: 10px;
+}
+.register-left{
+    text-align: center;
+    color: #fff;
+    margin-top: 2%;
+}
+.register-left input{
+    border: none;
+    border-radius: .5rem;
+    padding: 2%;
+    width: 30%;
+    background: #C7C1FC;
+    font-weight: bold;
+    color: #2D2D2D;
+    margin-top: 15%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.register-right{
+    background: #f8f9fa;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.register-left .header img{
+    float: left;
+    width: 20%;
+    border-radius: 70%;
+}
+.register-left .header h5{
+    position: relative;
+    font-size: 22px;
+    font-weight: 800;
+    top: 26px;
+    left: 0px;
+}
+.register-left h3{
+    padding-top: 35%;
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.register-left p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 20%;
+    margin-top: -9%;
+}
+.register-left input{
+    background: #fff;
+    color: #9D93FC;
+}
+.register .register-form{
+    padding: 10%;
+    margin-top: 10%;
+    margin-left: 8%;
+}
+.btnRegister{
+    margin-top: 5%;
+    margin-left: 35%;
+    border: none;
+    border-radius: .5rem;
+    padding: 2%;
+    background: #9D93FC;
+    color: #fff;
+    font-weight: 600;
+    width: 30%;
+    cursor: pointer;
+}
+.register-heading{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    margin-top: 2%;
+    margin-bottom: -15%;
+    color: #9D93FC;
+}
+.form-group input{
+    height: 40px;
+    border: none;
+    box-shadow: 2px 2px 3px 3px lightgrey;
+}
+.form-group label{
+    color: #9D93FC;
+    font-weight: bold;
+    margin-left: 5%;
+    text-transform: uppercase;
+}

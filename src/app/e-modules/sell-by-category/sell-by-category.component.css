@@ -1,0 +1,57 @@
+#dashboard{
+    width: 700px;
+    height: 100px;
+}
+#Submit{
+    margin-left: 100px;
+    color:blue;
+}
+#Submit{
+    height: 45px;
+    color: blue;
+}
+#Cancel{
+    margin-left: 100px;
+    color: white;
+}
+#Cancel{
+    height: 35px;
+    color: white;
+}
+#heading{
+    margin-left: 100px;
+    color: white;
+}
+
+#nav{
+    background-color: blue;
+    /* align-items: flex-start; */
+}
+
+#fnText{
+    height: 35px;
+    
+}
+/* button {
+    font-family: Arial;
+    background-color:blue;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  } */
+*  {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 150%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+matlabel {
+    width: 200px;
+}
+

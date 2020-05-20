@@ -1,0 +1,15 @@
+pipeline{
+    agent  {label 'TAP-Test'}
+    parameters{
+        booleanParam(name: 'Run Code Analysis', defaultValue: false, description: 'Sonar Code Analysis')
+        booleanParam(name: 'Deploy To Ptatian Test Server ', defaultValue: false, description: 'Release into Test server')
+        booleanParam(name: 'Deploy To AWS Server URL', defaultValue: false, description: 'Release into UAT server')
+    }
+    stages {
+        stage('Source') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'gittap', submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'gitlab', url: 'https://gitlab.Pratian.com/projects.skillassure/Waste-Management-frontend.git']]])
+            }
+        }
+    }
+}
